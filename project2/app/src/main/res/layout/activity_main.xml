@@ -31,6 +31,47 @@
         app:layout_constraintStart_toEndOf="@+id/icon"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:backgroundTint="@color/red"
+            android:text="@string/calendar"
+            android:textSize="20sp"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="monospace"
+            android:onClick="onClickGraph"
+            android:text="@string/graph"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:backgroundTint="@color/pink2"
+            android:text="@string/settings"
+            android:textSize="20sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_exit"
         android:layout_width="wrap_content"

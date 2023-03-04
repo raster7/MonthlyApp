@@ -7,6 +7,10 @@
     <string name="signInProfile">Войдите в свою учетную запись</string>
     <string name="email">Email</string>
     <string name="password">Пароль</string>
+    <string name="calendar">Календарь</string>
+    <string name="graph">График</string>
+    <string name="settings">Настройки</string>
+
 
 
     <string name="title_activity_first">FirstActivity</string>

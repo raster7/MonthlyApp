@@ -10,4 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#f9bac3</color>
     <color name="pink1">#fd86bd</color>
+    <color name="red">#ff0000</color>
+    <color name="purple">#ff00f5</color>
+    <color name="pink2">#f349a0</color>
 </resources>
