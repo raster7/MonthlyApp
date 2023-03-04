@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/text_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войдите в свою учетную запись"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:layout_marginTop="30sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_below="@+id/text_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="20sp">
+    </EditText>
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_below="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_marginHorizontal="20sp">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_sign_in1"
+        android:layout_below="@+id/edit_text_password"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="Войти"
+        android:layout_marginTop="10sp"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/pink1"
+        android:layout_centerInParent="true">
+    </Button>
+
+</RelativeLayout>
