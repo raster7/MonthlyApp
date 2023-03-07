@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         if (flag) {
             Intent intent = new Intent(this, StartActivity.class);
             startActivity(intent);
+            finish();
         }
-
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
         String hiEmail = "Привет, " + email;
