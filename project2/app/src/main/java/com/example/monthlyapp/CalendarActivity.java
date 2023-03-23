@@ -1,5 +1,6 @@
 package com.example.monthlyapp;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -17,5 +18,10 @@ public class CalendarActivity extends AppCompatActivity {
                     .add(R.id.fragmentContainerView, FirstFragment.class, null)
                     .commit();
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        MainActivity.setStatusOpenMainActivity(true);
     }
 }

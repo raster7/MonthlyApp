@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private final String TAG = "monthlyLogs";
     public static String name;
     public static Boolean flag = true;
+    public static Boolean openMainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+        setStatusOpenMainActivity(true);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StartActivity.class);
+                //setStatusOpenMainActivity(false);
                 startActivity(intent);
             }
         });
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.i(TAG,"Clicked on button 'Календарь'");
                 Intent intent1 = new Intent(MainActivity.this, CalendarActivity.class);
+                //setStatusOpenMainActivity(false);
                 startActivity(intent1);
             }
         });
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(MainActivity.this, SettingsActivity.class);
+                //setStatusOpenMainActivity(false);
                 startActivity(intent2);
             }
         });
@@ -65,6 +70,22 @@ public class MainActivity extends AppCompatActivity {
     public void onClickGraph(View view) {
         Log.i(TAG,"Clicked on button 'График'");
         Intent intent = new Intent(this, GraphicActivity.class);
+        //setStatusOpenMainActivity(false);
         startActivity(intent);
+    }
+
+    public static void setStatusOpenMainActivity(Boolean bool) {
+        openMainActivity = bool;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        setStatusOpenMainActivity(false);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 }
