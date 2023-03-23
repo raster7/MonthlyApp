@@ -19,43 +19,12 @@
         android:textAlignment="center">
     </TextView>
 
-    <EditText
-        android:id="@+id/edit_text_email"
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_sign_in"
-        android:layout_marginHorizontal="20sp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/email"
-        android:textSize="20sp">
-
-    </EditText>
-
-    <EditText
-        android:id="@+id/edit_text_password"
-        android:layout_below="@+id/edit_text_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:textSize="20sp"
-        android:text=""
-        android:layout_marginHorizontal="20sp">
-    </EditText>
-
-    <Button
-        android:id="@+id/btn_register1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_text_password"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="70sp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pink1"
-        android:fontFamily="monospace"
-        android:text="@string/register"
-        android:textColor="@color/black"
-        android:textSize="16sp">
-
-    </Button>
+        android:id="@+id/fragment_login"
+        tools:layout="@layout/fragment_login"
+        android:layout_below="@+id/text_sign_in">
+    </androidx.fragment.app.FragmentContainerView>
 
 </RelativeLayout>

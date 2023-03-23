@@ -24,25 +24,12 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //ActivityRegisterBinding view = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_register);
-        EditText email = findViewById(R.id.edit_text_email);
-        Button btn_register = findViewById(R.id.btn_register1);
-        btn_register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!(email.getText().toString().isEmpty())) {
-                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                    MainActivity.flag = false;
-                    intent.putExtra("email", email.getText().toString());
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(RegisterActivity.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
-                }
-                /*Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                intent.putExtra("email", email.getText().toString());
-                startActivity(intent);*/
-            }
-        });
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_login, LoginFragment.class, null)
+                    .commit();
+        }
     }
 }

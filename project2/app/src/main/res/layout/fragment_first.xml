@@ -28,12 +28,12 @@
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/yourProfileText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ваш профиль"
-        android:textSize="18sp"
-        android:fontFamily="monospace"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:text="Это ваш профиль"
+        android:fontFamily="monospace"
+        android:textSize="18sp" />
 </FrameLayout>

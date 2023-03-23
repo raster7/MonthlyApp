@@ -3,8 +3,8 @@
     <string name="sign_in">Войти</string>
     <string name="register">Зарегистрироваться</string>
     <string name="exit">Выйти</string>
-    <string name="createProfile">Создайте свою учетную запись</string>
-    <string name="signInProfile">Войдите в свою учетную запись</string>
+    <string name="createProfile">Создайте свою учетную запись!</string>
+    <string name="signInProfile">Войдите в свою учетную запись!</string>
     <string name="email">Имя пользователя</string>
     <string name="password">Пароль</string>
     <string name="calendar">Календарь</string>

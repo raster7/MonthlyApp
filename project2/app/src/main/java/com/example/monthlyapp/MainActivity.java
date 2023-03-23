@@ -1,5 +1,7 @@
 package com.example.monthlyapp;
 
+import static androidx.fragment.app.FragmentManagerKt.commit;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
                             FirstFragment.class, null)
                     .commit();
         }
-        Intent intent = getIntent();
-        String email = intent.getStringExtra("email");
-        name = email;
-        String hiEmail = "Привет, " + email;
-        view.textHellowName.setText(hiEmail);
         view.btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
