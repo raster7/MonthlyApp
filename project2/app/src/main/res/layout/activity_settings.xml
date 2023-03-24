@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".SettingsActivity">
+    tools:context=".Activity.SettingsActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
@@ -20,14 +20,37 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/settings"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
-        android:textAlignment="center"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3">
+
     </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:id="@+id/btn_for_developers"
+            android:backgroundTint="@color/pink2"
+            android:textSize="18sp"
+            android:fontFamily="monospace"
+            android:layout_marginHorizontal="50sp"
+            android:text="Для разработчиков" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

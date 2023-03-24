@@ -1,4 +1,4 @@
-package com.example.monthlyapp;
+package com.example.monthlyapp.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,12 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.Objects;
+import com.example.monthlyapp.Activity.MainActivity;
+import com.example.monthlyapp.Activity.RegisterActivity;
+import com.example.monthlyapp.Activity.SignInActivity;
+import com.example.monthlyapp.R;
 
 public class LoginFragment extends Fragment {
     private static final String TAG = "fragmentLogs";
@@ -50,6 +50,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String name = emailEditText.getText().toString();
+                name = "1";
                 if (name.isEmpty()) {
                     Toast.makeText(getContext(), "Поля не могут быть пустыми!", Toast.LENGTH_SHORT).show();
                 } else {

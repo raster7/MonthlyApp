@@ -1,6 +1,4 @@
-package com.example.monthlyapp;
-
-import static androidx.fragment.app.FragmentManagerKt.commit;
+package com.example.monthlyapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +6,10 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentContainerView;
 
+import com.example.monthlyapp.Fragment.FirstFragment;
+import com.example.monthlyapp.R;
 import com.example.monthlyapp.databinding.ActivityMainBinding;
-
-import java.net.Inet4Address;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = "monthlyLogs";

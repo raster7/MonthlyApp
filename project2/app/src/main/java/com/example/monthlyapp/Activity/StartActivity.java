@@ -1,21 +1,14 @@
-package com.example.monthlyapp;
+package com.example.monthlyapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.monthlyapp.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.Button;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.monthlyapp.databinding.ActivityStartBinding;
 
 public class StartActivity extends AppCompatActivity {
     private Button btn_sign_in;

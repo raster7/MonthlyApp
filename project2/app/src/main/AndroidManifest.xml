@@ -12,31 +12,34 @@
         android:theme="@style/Theme.MonthlyApp"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Activity.ForDevelopersActivity"
             android:exported="false" />
         <activity
-            android:name=".GraphicActivity"
+            android:name=".Activity.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".CalendarActivity"
+            android:name=".Activity.GraphicActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activity.CalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RegisterActivity"
             android:exported="false"
             android:label="@string/title_activity_register"
             android:theme="@style/Theme.MonthlyApp.NoActionBar" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".Activity.SignInActivity"
             android:exported="false"
             android:label="@string/title_activity_sign_in"
             android:theme="@style/Theme.MonthlyApp.NoActionBar" />
         <activity
-            android:name=".StartActivity"
+            android:name=".Activity.StartActivity"
             android:exported="true"
             android:label="@string/title_activity_start"
             android:theme="@style/Theme.MonthlyApp.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
