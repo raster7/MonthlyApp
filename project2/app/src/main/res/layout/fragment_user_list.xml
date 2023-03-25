@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:id="@+id/textChoose"
         android:layout_height="wrap_content"
-        android:text="Выберите каким способом вы хотите вывести список всех зарегистированных пользователей"
+        android:text="Выберите каким способом вы хотите вывести список всех зарегистрированных пользователей"
         android:textColor="@color/black"
         android:fontFamily="monospace"
         android:layout_marginStart="20sp"
