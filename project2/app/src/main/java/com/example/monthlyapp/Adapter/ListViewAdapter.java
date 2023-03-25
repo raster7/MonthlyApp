@@ -36,9 +36,11 @@ public class ListViewAdapter extends ArrayAdapter<User> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = inflater.inflate(this.layout, parent, false);
         TextView textViewName = view.findViewById(R.id.name);
-        textViewName.setText(this.users[position].name);
+        String name = "Имя пользователя: " + this.users[position].name;
+        textViewName.setText(name);
+        String password = "Пароль: " + this.users[position].password;
         TextView textViewPassword = view.findViewById(R.id.password);
-        textViewPassword.setText(this.users[position].password);
+        textViewPassword.setText(password);
         ImageView imageAvatar = view.findViewById(R.id.avatar);
         imageAvatar.setImageResource(R.drawable.ic_launcher_foreground);
         return view;

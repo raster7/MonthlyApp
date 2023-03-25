@@ -3,7 +3,7 @@ package com.example.monthlyapp.Class;
 import java.util.ArrayList;
 
 public class DataBase {
-    private static int counter = 100;
+    private static int counter = 201;
     public static User[] users = initCounterOfUsers(counter);
 
     private static User[] initCounterOfUsers(int n) {
