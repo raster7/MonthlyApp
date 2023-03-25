@@ -1,5 +1,6 @@
 package com.example.monthlyapp.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -25,6 +26,13 @@ public class UserListFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction().replace(R.id.fragmentContainerView5, new ListViewFragment(), "123").commit();
+            }
+        });
+
+        btn_recycler_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.fragmentContainerView5, new RecyclerViewFragment(), "123").commit();
             }
         });
         return view;

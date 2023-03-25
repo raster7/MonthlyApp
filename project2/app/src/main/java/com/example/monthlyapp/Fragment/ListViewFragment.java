@@ -21,7 +21,7 @@ public class ListViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_view, container, false);
         ListView listView = view.findViewById(R.id.list_view);;
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(), DataBase.users);
+        ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(), R.layout.item, DataBase.users);
         listView.setAdapter(listViewAdapter);
         return view;
     }

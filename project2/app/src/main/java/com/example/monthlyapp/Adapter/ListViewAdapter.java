@@ -20,23 +20,25 @@ import com.example.monthlyapp.Class.User;
 import com.example.monthlyapp.R;
 
 public class ListViewAdapter extends ArrayAdapter<User> {
-
-    private Context context;
+    private LayoutInflater inflater;
+    private int layout;
     private User[] users;
-
-    public ListViewAdapter(@NonNull Context context, @NonNull User[] users) {
-        super(context, R.layout.item, DataBase.users);
-        this.context = context;
+    public ListViewAdapter(Context context, int resource,
+                                 User[] users) {
+        super(context, resource, users);
         this.users = users;
+        this.layout = resource;
+        this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.item, parent, false);
+        View view = inflater.inflate(this.layout, parent, false);
         TextView textViewName = view.findViewById(R.id.name);
         textViewName.setText(this.users[position].name);
+        TextView textViewPassword = view.findViewById(R.id.password);
+        textViewPassword.setText(this.users[position].password);
         ImageView imageAvatar = view.findViewById(R.id.avatar);
         imageAvatar.setImageResource(R.drawable.ic_launcher_foreground);
         return view;
