@@ -30,11 +30,15 @@ public class UserListFragment extends Fragment {
         Button btn_recycler_view = view.findViewById(R.id.btn_recycler_view);
 
         btn_list_view.setOnClickListener(v -> {
-            Navigation.findNavController(view).navigate(R.id.action_UserListFragment_to_ListViewFragment, null);
+            Bundle bundle = new Bundle();
+            bundle.putString("stringExample", "ListViewFragment is working");
+            Navigation.findNavController(view).navigate(R.id.action_UserListFragment_to_ListViewFragment, bundle);
         });
 
         btn_recycler_view.setOnClickListener(v -> {
-            Navigation.findNavController(view).navigate(R.id.action_UserListFragment_to_RecyclerViewFragment, null);
+            Bundle bundle = new Bundle();
+            bundle.putString("stringExample", "RecyclerViewFragment is working");
+            Navigation.findNavController(view).navigate(R.id.action_UserListFragment_to_RecyclerViewFragment, bundle);
         });
         return view;
     }

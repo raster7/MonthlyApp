@@ -28,6 +28,7 @@ public class RecyclerViewFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
+        Toast.makeText(getContext(), getArguments().getString("stringExample"), Toast.LENGTH_SHORT).show();
         return view;
     }
 }

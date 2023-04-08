@@ -26,7 +26,7 @@ public class ListViewFragment extends Fragment {
         ListView listView = view.findViewById(R.id.list_view);;
         ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(), R.layout.item, DataBase.users);
         listView.setAdapter(listViewAdapter);
-
+        Toast.makeText(getContext(), getArguments().getString("stringExample"), Toast.LENGTH_SHORT).show();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
