@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/user_list_fragment">
+
+    <fragment
+        android:id="@+id/user_list_fragment"
+        android:name="com.example.monthlyapp.Fragment.UserListFragment"
+        android:label="user_list_selector_fragment"
+        tools:layout="@layout/fragment_user_list">
+
+        <action
+            android:id="@+id/action_UserListFragment_to_ListViewFragment"
+            app:destination="@+id/fragment_list_view">
+        </action>
+
+        <action
+            android:id="@+id/action_UserListFragment_to_RecyclerViewFragment"
+            app:destination="@+id/fragment_recycler_view">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_list_view"
+        android:name="com.example.monthlyapp.Fragment.ListViewFragment"
+        android:label="list_view_fragment"
+        tools:layout="@layout/fragment_list_view">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_recycler_view"
+        android:name="com.example.monthlyapp.Fragment.RecyclerViewFragment"
+        android:label="recycler_view_fragment"
+        tools:layout="@layout/fragment_recycler_view">
+    </fragment>
+
+</navigation>

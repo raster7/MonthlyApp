@@ -21,7 +21,6 @@ public class ForDevelopersActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
                     .add(R.id.fragmentContainerView4, FirstFragment.class, null)
-                    .add(R.id.fragmentContainerView5, UserListFragment.class, null)
                     .commit();
         }
     }

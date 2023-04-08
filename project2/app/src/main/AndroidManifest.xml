@@ -12,6 +12,11 @@
         android:theme="@style/Theme.MonthlyApp"
         tools:targetApi="31">
         <activity
+            android:name=".UserListActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_list"
+            android:theme="@style/Theme.MonthlyApp.NoActionBar" />
+        <activity
             android:name=".Activity.ForDevelopersActivity"
             android:exported="false" />
         <activity
